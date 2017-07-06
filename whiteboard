@@ -1,0 +1,70 @@
+at 3rd git commit:
+not sure if sessions is actually working>???
+need to have more then one post stay on the screen
+need to have delete buton for comments/ like button for comments
+need to be able to log out
+
+
+
+
+create the header and footer with links through eachother
+===Home page--- info and some pics,,have a log in button,, have a register button, have a reviews blog/commends...
+===Register page--- just a form with some pics and directs to logIn page
+===LogIn page---
+
+
+
+
+
+
+
+
+if enterned wrong info to signin use this
+https://t3.ftcdn.net/jpg/01/31/76/68/240_F_131766849_lCg4tgx7jS7DfBBcHI3AplVscEEBPfQ0.jpg
+
+http://sundayschool.masdfw.org/wp-content/uploads/2015/10/register-here.png
+
+http://www.safetysign.com/images/source/large-images/W5413.png
+
+left entrance sign
+http://thumbs1.ebaystatic.com/d/l225/m/m_nT_uqKW8ZtT0AbuTub1JQ.jpg
+
+
+//
+// function authenticate(req, username, password){
+//   var authenticatedUser = models.userInfo.findAll({}).then(function (user) {
+//   console.log("testing");
+//     if (username === user.username && password === user.password) {
+//       req.session.authenticated = true;
+//       console.log('User & Password Authenticated');
+//     } else {
+//       return false
+//     }
+// // console.log(req.session);
+// return req.session;
+//   });
+// }
+//
+// app.post('/submit', function(req, res){
+//   var username = req.body.username;
+//   var password = req.body.password;
+//   authenticate(req, username, password);
+//   if (req.session && req.session.authenticated){
+//     res.render('user', { username: username });
+//   } else {
+//     res.redirect('/logIn');
+//   }
+// })
+
+
+
+
+// app.get ('/', function(req, res){
+//
+//    var user = User.find('oresti')
+//    res.send(user)
+//    // res.render('')
+//  })
+//  app.get('/list', function(req, res){
+//    res.send(User.all)
+//  })

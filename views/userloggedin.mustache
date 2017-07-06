@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+   <title></title>
+ </head>
+  <body>
+   <div class="container">
+    <img src="http://www.waywardwanders.com/wp-content/uploads/2011/01/blabber-300x204.jpg">
+    <h1>Hello There you made it; now let Gabble</h1>
+   </div>
+
+    <div class="comments">
+     <!-- form to take in comments and post them -->
+     <form action="/post-comment" id="postC" method="post">
+      <input type="string" name="title"placeholder="post title here">
+      <input type="string" name="body" placeholder="post comment here">
+      <button id="postButton" type="submit">Post</button>
+    </form>
+     <ul>
+      {{#post}}
+       <li> {{title}},{{body}}</li>
+      {{/post}}
+     <!-- dropdown menu with like, not like, and delete option or just buttons -->
+    </div>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    body {
+      background-color: #23d6e0;
+    }
+    .container{
+      display: flex;
+    }
+    #button{
+      background-image: url(http://sundayschool.masdfw.org/wp-content/uploads/2015/10/register-here.png);
+    }
+  .left{
+    background-image: url(http://www.rses.org/assets/conference/iStock_000017157664XSmall_Register_Button.jpg);width: 250px; height: 300px;
+
+  }
+  .right{
+    background-image: url(http://www.greek-thesaurus.gr/images/pub/tiwanaku_doorway.jpg);
+    width: 250px;
+
+  }
+  h3 {
+    color: white;
+  }
+  h2{
+    color: black;
+  }
+#entrance{
+  width: 230px;
+  height: 200px;
+}
+    </style>
+  </head>
+  <header>
+          <nav>
+            <img src="images/filmclub.png" id="logo">
+
+            <a href="index.mustache" id="register"<img src="http://sundayschool.masdfw.org/wp-content/uploads/2015/10/register-here.png"> </a>
+            <a href="#"id="calendar" > calendar </a>
+            <a href="join.html"id="join" > join </a>
+          </nav>
+
+        </header>
+  <body>
+    <h1>Welcome to Gabble</h1>
+  <div class="container">
+    <div class="left">
+     <h2>Become a Gabbler:</h2>
+      <form action="/yellow" id="register" method="post">
+       <input type="text" name="username" placeholder="User Name">
+       <input type="password" name="password" placeholder="Password">
+       <input type="nickname" name="nickname" placeholder="nickname">
+       <input type="email" name="email" placeholder="email">
+       <button id="button" type="submit">submit</button>
+      </form>
+       <ul>
+        {{#user}}
+         <li>{{username}}, {{password}},{{nickname}}</li>
+        {{/user}}
+       </ul>
+    </div>
+
+    <div class="center">
+      <img id="entrance" src="http://www.safetysign.com/images/source/large-images/W5413.png"/>
+    </div>
+
+    <div class="right">
+     <h3>Gabblers Entrance</h3>
+      <form action="/index" id="login" method="post">
+       <input type="text" name="username" placeholder="User Name" />
+       <input type="password" name="password" placeholder="Password" />
+       <input type="password" name="confirm_pass" placeholder="Confirm Password" />
+       <button type="submit">submit</button>
+      </form>
+    </div>
+  </div>
+  </body>
+</html>

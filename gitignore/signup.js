@@ -6,6 +6,11 @@ const session = require('express-session');
 const models = require("../models");
 const router = express.Router();
 
+var app = express();
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
 // middleware
 router.use(function(req,res,next){
   // console.log("middleware working");
@@ -26,7 +31,7 @@ router.post('/signup', function(req,res){
    nickname: req.body.nickname
  })
    user.save();
-   res.redirect('/welcome')
+   res.redirect('signup')
  }
 )
 
