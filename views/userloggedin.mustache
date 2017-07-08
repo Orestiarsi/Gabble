@@ -4,10 +4,17 @@
   <meta charset="utf-8">
    <title></title>
  </head>
+<header>
+  <div class="logout">
+   <form class="" action="/logOut" method="post">
+     <button type="submit" name="logOut">Get Out</button>
+   </form>
+  </div>
+</header>
   <body>
    <div class="container">
     <img src="http://www.waywardwanders.com/wp-content/uploads/2011/01/blabber-300x204.jpg">
-    <h1>Hello There you made it; now let Gabble</h1>
+    <h1>Hello There {{username}} made it; now lets Gabble</h1>
    </div>
 
     <div class="comments">
@@ -19,9 +26,18 @@
     </form>
      <ul>
       {{#post}}
-       <li> {{title}},{{body}}</li>
+       <form class="likeForm" method="POST" action= "/like">
+        <button type="submit" class="likeButtons" name="likeButton" value="{{id}}">LIKE</button>
+    </form>
+
+     <form class="deleteButton" action="/delete" method="post">
+       <button type="submit" class="deleteButtons" name="deleteButton" value="delete">delete</button>
+     </form>
+
+        <li> {{title}},{{body}}</li>
       {{/post}}
-     <!-- dropdown menu with like, not like, and delete option or just buttons -->
     </div>
+
+</div>
   </body>
 </html>
